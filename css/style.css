@@ -3,6 +3,19 @@
 :root{
     --main-color:#0040B0;
 }
+/* transition effect */
+.reveal{
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: all 2s ease;
+  }
+  
+  .reveal.active{
+    transform: translateY(0px);
+    opacity: 1;
+  }
+  /* -------------------- */
 
 *{
     font-family: 'Josefin Sans', sans-serif;
@@ -184,7 +197,7 @@ header .follow a:hover{
     display: none;
 }
 
-.home{
+.home .reveal{
     display: flex;
     align-items: center;
     flex-wrap: wrap;
@@ -705,7 +718,7 @@ span{
 
     html{
         font-size: 55%;
-        background-color: #191919;
+        background-color: #000000;
     }
     
     body{
@@ -735,7 +748,7 @@ span{
 
     html{
         font-size: 50%;
-        background-color: #191919;
+        background-color: #000000;;
     }
 
     header{
