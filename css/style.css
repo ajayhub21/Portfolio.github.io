@@ -580,6 +580,11 @@ span{
     flex-wrap: wrap;
     padding-bottom: 2rem;
 }
+.downloadIcon{
+    font-size: 22px;
+    position: absolute;
+    right: 37px;
+}
 
 .contact .icons-container .icons{
     flex:1 1 25rem;
