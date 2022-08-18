@@ -62,7 +62,7 @@ section.experience{
    height:4px;
   width:45px;
    bottom:10px;
-   background-color:#7f00ff;
+   background-color:var(--main-color);
 }
 .myName{
     text-transform: none !important;
