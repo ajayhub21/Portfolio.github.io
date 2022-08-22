@@ -56,14 +56,14 @@ section.experience{
    letter-spacing:5px;
    color:#3d535f;
 }
-.topline::after{
+/* .topline::after{
    position:absolute;
    content:'';
    height:4px;
   width:45px;
    bottom:10px;
    background-color:var(--main-color);
-}
+} */
 .myName{
     text-transform: none !important;
 }
@@ -197,7 +197,7 @@ header .follow a:hover{
     display: none;
 }
 
-.home .reveal{
+.home .revea{
     display: flex;
     align-items: center;
     flex-wrap: wrap;
@@ -317,9 +317,7 @@ header .follow a:hover{
     border: 1px solid white;
     border-radius: 15px;
 }
-.about-text{
-	width: 550px;
-}
+
 .main{
     width: 1130px;
     max-width: 95%;
