@@ -100,7 +100,7 @@ section.experience{
 
 .btn:hover{
     background:#111;
-    letter-spacing: .2rem;
+    letter-spacing: .1rem;
 }
 
 header{
@@ -317,7 +317,9 @@ header .follow a:hover{
     border: 1px solid white;
     border-radius: 15px;
 }
-
+.hide{
+    display: none;
+}
 .main{
     width: 1130px;
     max-width: 95%;
@@ -688,6 +690,15 @@ display:flex;
 margin: auto;
 padding:0 1.5rem;
 }
+@keyframes taadaa { 
+    0% {
+      opacity: 0;
+    }
+  
+    100% {
+      opacity: 1;
+    }
+  }
 .galcontainer{
     width: 100%;
     min-height: 100vh;
@@ -695,7 +706,12 @@ padding:0 1.5rem;
     align-items: center;
     justify-content: center;
     padding: 50px 8%;
+  
+    animation: taadaa 2s infinite;
 }
+
+  
+
 .gallery{
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(250px, 1fr));
@@ -797,9 +813,30 @@ justify-content:center;
     header{
         width:100%;
     }
+
     .about{
         display: inline-table;
     }
+.about-text h2 {
+    font-size: 30px;
+    margin-left: 129px;
+}
+.about-text h5 {
+    font-size: 22px;
+    margin-left: 95px;
+}
+.about-text p{
+    margin-left: 39px;
+}
+.about-text .btn{
+    margin-left: 115px;
+}
+.about-text p {
+    font-size: 16px;
+}
+.headingBlack,.heading{
+    font-size: 30px;
+}
 
     .main{
         display: block !important;
