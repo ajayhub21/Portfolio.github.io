@@ -286,6 +286,7 @@ header .follow a:hover{
     padding: 0.5rem 0;
 }
 
+
 .about .row-1 .content .box-container .box{
     flex:1 1 20rem;
 }
@@ -305,6 +306,15 @@ header .follow a:hover{
 }
 .boxDetails{
 	flex:1 1 20rem;
+}
+.DetailsWrapper{
+    font-size: 16px;
+}
+#mail{
+    text-transform: lowercase;
+}
+.DetailsWrapper span:nth-child(2){
+    color: #fffc;
 }
 .about{
 	width: 100%;
@@ -702,22 +712,12 @@ padding:0 1.5rem;
 .galcontainer{
     width: 100%;
     min-height: 100vh;
-    display:flex;
-    align-items: center;
-    justify-content: center;
-    padding: 50px 8%;
+   
   
     animation: taadaa 2s infinite;
 }
 
   
-
-.gallery{
-    display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(250px, 1fr));
-    grid-gap:30px;
-
-}
 .gallery img{
     width:100%;
      
@@ -754,45 +754,68 @@ justify-content:center;
 .footer span{
     color:var(--main-color);
 }
+.PersonalAssistance{
+    z-index: 1;
+    animation: fadeInRight 5s ease-in-out;
+    animation-duration: 0.7s;
+    animation-delay: 10s;
+    
+}
 
+@keyframes fadeInRight {
+    from {
+      opacity: 0;
+      transform: translateX(300px);
+    }
+    to {
+      opacity: 1;
+    }
+  }
 .PersonalAssistance img{
     position: fixed;
     bottom: 14px;
-    right: 46px;
-    /* height: 64px;
-    width: 64px; */
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    right: 16px;
+    width: 250px;
     cursor: pointer;
-    /* background: transparent url(/campus/pages/images/ChatbotImages/rexa-mascot-icon.svg) 0% 0% no-repeat padding-box; */
-   
+    z-index: 1;
+
 }
 
 .PersonalAssistance .intro{
     position: fixed;
-    bottom: 87.01px;
-    right: 76px;
-    width: 168px;
-    height: 41px;
+    bottom: 165.01px;
+    right: 231px;
+    height: 78px;
+    text-align: center;
+    width: 337px;
+   
+ 
     background: #FFFFFF 0% 0% no-repeat padding-box;
     box-shadow: 0px 3px 6px #86909f33;
-    border: 1px solid #5259BD;
+    border: 1px solid #012b87;
     border-radius: 20px 20px 0px 20px;
     opacity: 1;
-    padding-top: 11px;
+    padding: 6px;
     /* -webkit-transition-duration: 0.5s; */
     animation: fadeInAnimationIntro2 ease 0.5s;
     animation-iteration-count: 1;
-    animation-fill-mode: forwards;
+    z-index: 1;
+    animation-fill-mode: forwards;    
+ 
 }
 
 .PersonalAssistance .introcontent{
     padding-left: 20px;
     text-align: center;
-    font-size: 14px;
-    font-family: robotoRegular, Open Sans, Segoe UI, Sans-Serif;
+    font-size: 20px;
+    
     font-weight: 500;
-    letter-spacing: 0px;
-    color: #5259BD;
+    letter-spacing: 2px;
+    color: #0040b0;
     opacity: 1;
+    z-index: 1;
 }
 
 
@@ -867,10 +890,13 @@ justify-content:center;
 .about-text p{
     margin-left: 39px;
 }
+.about-text div{
+    margin-left: 10px;
+}
 .about-text .btn{
     margin-left: 115px;
 }
-.about-text p {
+.about-text p,.about-text div{
     font-size: 16px;
 }
 .headingBlack,.heading{
@@ -888,6 +914,25 @@ justify-content:center;
     }
     .experience .box-container .box{
         padding-right: 0;
+    }
+    .PersonalAssistance img {
+       
+        bottom: 14px;
+         right: 8px;
+        width: 165px;
+       
+    }
+    .PersonalAssistance .intro {
+        
+        bottom: 115.01px;
+        right: 149px;
+        height: 73px;
+        
+        width: 197px;
+    }
+    .PersonalAssistance .introcontent {
+        
+        font-size: 13px;
     }
 
 }

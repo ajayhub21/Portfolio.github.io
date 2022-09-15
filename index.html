@@ -26,13 +26,13 @@
 <div id="menu-bars" class="fas fa-bars"></div>
     
 <!-- header section starts  -->
-<div class="PersonalAssistance">
-    <div class="ImgWrapper">
-    <img src="images/My project.png"/>
+<div class="PersonalAssistance fadeInRight">
+    
+    <img src="images/virtual-assistant-services-138803.png"/>
+
+<div ng-show="rexaIntroContent"  data-ng-class="{'rexa-intro2-popup-content-container':!rexaHelpContent , 'rexa-intro1-popup-content-container':rexaHelpContent}" class="intro">
+    <span class="introcontent">Hello👋Iam Natasha[Ajay's PersonalAssistance]</span>
 </div>
-<!-- <div ng-show="rexaIntroContent" style="width: 132.01px;" data-ng-class="{'rexa-intro2-popup-content-container':!rexaHelpContent , 'rexa-intro1-popup-content-container':rexaHelpContent}" class="intro">
-    <span class="introcontent">Hi!! I am REXA</span>
-</div> -->
 </div>
 <header>
 
@@ -103,20 +103,54 @@
                 <div class="contentBox">
             <div class="box-container">
                 <div class="boxDetails">
-                    <p> <span> DOB : </span>21/06/2001</p>
-                    <p> <span> Age : </span> 19 </p>
-                    <p> <span> Gender : </span> Male </p>
-                    <p> <span> Language : </span> English </p>
-                    <p> <span>Work : </span>Tata Consultancy Services,Chennai</p>
+                    <div class="DetailsWrapper">
+                        <span>DOB :</span>
+                        <span id="dob">21/06/2001</span>
+                    </div>
+                    <div class="DetailsWrapper">
+                        <span>Age :</span>
+                        <span id="age"></span>
+                    </div>
+                    <div class="DetailsWrapper">
+                        <span>Gender :</span>
+                        <span >Male</span>
+                    </div>
+                    <div class="DetailsWrapper">
+                        <span>Language :</span>
+                        <span >English,தமிழ்</span>
+                    </div>
+                    <div class="DetailsWrapper">
+                        <span>Work :</span>
+                        <span >Tata Consultancy Services,Chennai</span>
+                    </div>
+                    <!-- <p > <span >  </span></p> -->
+                    
+                
                    
                 </div>
                 <div class="boxDetails">
+                    <div class="DetailsWrapper">
+                        <span>Email :</span>
+                        <span id="mail">rajaybe@gmail.com</span>
+                    </div>
+                    <div class="DetailsWrapper">
+                        <span>Native : </span>
+                        <span>Nagapattinam</span>
+                    </div>
+                    <div class="DetailsWrapper">
+                        <span>State :</span>
+                        <span >Tamil Nadu</span>
+                    </div>
+                    <div class="DetailsWrapper">
+                        <span>Country :</span>
+                        <span >India</span>
+                    </div>
+                    <div class="DetailsWrapper">
+                        <span>Work :</span>
+                        <span >Tata Consultancy Services,Chennai</span>
+                    </div>
                     
-                    <p> <span> Phone : </span> 9787105400 </p>
-                    <p> <span> Email : </span> rajaybe@gmail.com </p>
-                    <p> <span> District : </span> Nagapattinam </p>
-                    <p> <span> State : </span> Tamil Nadu </p>
-                    <p> <span> Country : </span> India </p>
+                    
                     
                     
                 </div>
@@ -542,5 +576,6 @@
 <!-- custom js file link  -->
 <script src="js/script.js"></script>
 <script src="js/lightbox-plus-jquery.js"></script>
+<script src="js/Agecal.js"></script>
 </body>
 </html>
