@@ -8,11 +8,15 @@
 
     <!-- font awesome cdn link  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
    
     <script src="https://kit.fontawesome.com/3da8f4c544.js" crossorigin="anonymous"></script>
     <!-- custom css file link  -->
     <link rel="stylesheet" href="css/style.css">
      <link rel="stylesheet" href="css/lightbox.css">
+     <link rel="stylesheet" href="css/chatbot.css">
+
+     <!-- <script src="//code.tidio.co/wx6gyxo6sph7e45qfmgabz8i4ocuxnoi.js" async></script> -->
 
 
 </head>
@@ -24,14 +28,40 @@
 
 
 <div id="menu-bars" class="fas fa-bars"></div>
+<div  class="chat-box">
+    <div class="chat-box-header">
+             <h3>Message Us</h3>
+            <p>
+                <i class="fa fa-times" id="closeIcon"></i>	
+            </p>
+    </div>
+<div id="container" class="chat-box-body">
+
+     <div id="chat" class="chat">
+      <div id="messages" class="messages"></div>
+      <!-- <input  type="text" placeholder="Write something..." autocomplete="off" autofocus="true" /> -->
+    </div>
+  </div>
+  <div id="suggestion" class="suggestion">
+    <!-- <div class="sugWrapper">
+        <span class="sugText">Skils</span>
+        <span class="sugText">Skils</span>
+        <span class="sugText">Skils</span>
+    </div> -->
+  </div>
+  <div class="chat-box-footer">
     
+    <input id="input" placeholder="Enter Your Message" autocomplete="off" autofocus="true" type="text">
+    <i class="send far fa-paper-plane" aria-hidden="true"></i>
+</div>
+</div>
 <!-- header section starts  -->
 <div class="PersonalAssistance fadeInRight">
     
     <img src="images/virtual-assistant-services-138803.png"/>
 
 <div ng-show="rexaIntroContent"  data-ng-class="{'rexa-intro2-popup-content-container':!rexaHelpContent , 'rexa-intro1-popup-content-container':rexaHelpContent}" class="intro">
-    <span class="introcontent">Hello👋Iam Natasha[Ajay's PersonalAssistance]</span>
+    <span class="introcontent">Hello👋Iam Natasha[Aj's PA]Click to,Talk with Me..</span>
 </div>
 </div>
 <header>
@@ -577,5 +607,6 @@
 <script src="js/script.js"></script>
 <script src="js/lightbox-plus-jquery.js"></script>
 <script src="js/Agecal.js"></script>
+<script src="js/chatbot.js"></script>
 </body>
 </html>

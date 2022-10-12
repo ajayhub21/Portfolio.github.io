@@ -1,7 +1,16 @@
 let menu = document.querySelector('#menu-bars');
 let header = document.querySelector('header');
+let closeIcon=document.querySelector('#closeIcon');
+let chatbot=document.querySelector('.PersonalAssistance');
 
+chatbot.onclick=()=>{
+    document.querySelector(".chat-box").style.visibility = 'visible';
+}
 
+closeIcon.onclick=()=>{
+    document.querySelector(".chat-box").style.visibility = 'hidden';
+
+}
 
 menu.onclick = () =>{
     menu.classList.toggle('fa-times');
