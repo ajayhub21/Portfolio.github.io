@@ -901,6 +901,8 @@ justify-content:center;
 }
 .headingBlack,.heading{
     font-size: 30px;
+    color: white;
+}
 }
 
     .main{

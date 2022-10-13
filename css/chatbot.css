@@ -22,6 +22,10 @@ span {
     padding-right: 15px;
     padding-left: 15px;
 }
+.error{
+    border-color: red !important;
+    color: red !important;
+}
 
 .container {
     display: flex;

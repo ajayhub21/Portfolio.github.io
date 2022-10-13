@@ -6,6 +6,22 @@ document.addEventListener("DOMContentLoaded", () => {
    
     // let count=0;
     let incr=suggestionbox(count);
+    let senticon=document.querySelector(".send");
+    senticon.addEventListener("click",function(){
+      let input = inputField.value;
+      let inputbar=document.getElementById("input");
+      inputField.value = "";
+      if(input==""){
+       inputbar.classList="error";
+      }
+      else{
+        if(inputbar.classList.contains("error")){
+          inputbar.classList.remove("error");
+        }
+      output(input);
+      }
+
+    });
     inputField.addEventListener("keydown", function (e) {
       if (e.code === "Enter") {
         let input = inputField.value;
