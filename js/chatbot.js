@@ -69,6 +69,10 @@ document.addEventListener("DOMContentLoaded", () => {
     ["are you single","committed","lover","girlfriend"],
     //17
     ["friends","close ones","friend","best ones"],
+    //18
+    ["job","working in","working","designation","position","work"],
+    //19
+    ["dob","date of birth","age"],
     
     
   ];
@@ -113,7 +117,11 @@ document.addEventListener("DOMContentLoaded", () => {
     //16
     ["Single!!Ready to Mingle❤️","Single","Happy😊"],
     //17
-    ["ASH","Abishek,Shylu,Haridha","Evane,Eruma,Minion"]
+    ["ASH","Abishek,Shylu,Haridha","Evane,Eruma,Minion"],
+    //18
+    ["TCS","Tata Consultancy Services","Software Associate"],
+    //19
+    ["21/06/2001[21]"],
     
   ];
   
@@ -130,7 +138,7 @@ document.addEventListener("DOMContentLoaded", () => {
     //1
     ["your name","are you single?","Skils"],
     ["Class12","Class10","College"],
-    ["Friends","Internship","cgpa"],
+    ["Working In","Internship","cgpa"],
   
   ];
   

@@ -862,6 +862,13 @@ justify-content:center;
     .cursor-2{
         display: none;
     }
+    .row-2 .skills .progress h3{
+        color: white;
+    }
+    .headingBlack,.heading{
+        /* font-size: 30px; */
+        color: white;
+    }
 
 }
 
@@ -903,7 +910,7 @@ justify-content:center;
     font-size: 30px;
     color: white;
 }
-}
+
 
     .main{
         display: block !important;
@@ -935,6 +942,9 @@ justify-content:center;
     .PersonalAssistance .introcontent {
         
         font-size: 13px;
+    }
+    .row-2 .skills .progress h3{
+        color: white;
     }
 
 }
