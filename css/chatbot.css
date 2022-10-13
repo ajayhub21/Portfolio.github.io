@@ -57,7 +57,7 @@ input {
     overflow: scroll;
     height: 90%;
     width: 100%;
-    background-color: white;
+    /* background-color: white; */
     padding: 15px;
     margin: 15px;
     border-radius: 10px;
@@ -137,7 +137,7 @@ input {
     right: 213px;
     bottom: 146px;
     margin: 15px;
-    background: rgb(255, 255, 255);
+    background: rgb(255 255 255);
     border-radius: 15px;
 }
 
@@ -180,7 +180,7 @@ input {
 
         .chat-box-body {
         height: 75%;
-        background: #f8f8f8;
+        /* background: #f8f8f8; */
         overflow-y: scroll;
         padding: 12px;
         }
@@ -188,7 +188,7 @@ input {
         .chat-box-send {
             width: 250px;
             float: right;
-            background: white;
+            /* background: white; */
             padding: 10px 20px;
             border-radius: 5px;
             box-shadow: 0 0 10px rgba(0, 0, 0, .015);
@@ -217,7 +217,7 @@ input {
             .chat-box-receive {
             width: 250px;
             float: left;
-            background: white;
+            /* background: white; */
             padding: 10px 20px;
             border-radius: 5px;
             box-shadow: 0 0 10px rgba(0, 0, 0, .015);
@@ -253,7 +253,7 @@ input {
             border: none;
             padding: 16px;
             font-size: 14px;
-            background: white;
+            /* background: white; */
             cursor: pointer;
         }
 
@@ -267,7 +267,7 @@ input {
             border: 1px solid;
             /* -webkit-appearance: none; */
             border-radius: 50px;
-            background: whitesmoke;
+            /* background: whitesmoke; */
             margin: 10px;
             font-family: ubuntu;
             font-weight: 600;
@@ -290,6 +290,7 @@ input {
             font-size: 21px;
             transform: translate(0px, 20px);
             cursor: pointer;
+            margin-right: 10px;
         }
     
 
@@ -344,4 +345,37 @@ input {
         width: 75vw;
         margin: 10vw;
     }
+}
+
+@media (max-width:450px){
+    .chat {
+        width: 39vw;
+        margin: auto;
+    }
+    .messages {
+        width: unset;
+        padding: unset;
+        margin: unset;
+    }
+    .chat-box {
+        width: 246px !important;
+        right: 115px !important;
+    bottom: 99px !important;
+
+}
+.chat-box h3{
+    left: 87px !important;
+    top: 12px !important;
+}
+
+#bot{
+    margin-left: 17px;
+}
+.sugText{
+    padding-right: 8px;
+    padding-left: 5px;
+}
+.chat-box-send p,.Assistant {
+    font-size: 14px;
+}
 }

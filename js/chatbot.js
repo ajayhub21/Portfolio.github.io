@@ -87,7 +87,7 @@ document.addEventListener("DOMContentLoaded", () => {
     //11
     ["8.4","84%"],
     //12
-    ["Ciarpro Tech Pvt Limited,Megam Solution,Oneyes Technologies"],
+    ["1)Ciarpro Tech Pvt Limited,2)Megam Solution,3)Oneyes Technologies"],
     //13
     ["6.4","64%"],
     //14
