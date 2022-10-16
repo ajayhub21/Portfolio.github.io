@@ -48,6 +48,10 @@ section.experience{
     /* padding: 30px 0px; */
     background-color: #191919;
 }
+#vibe{
+    background-image: url("../images/Sprinkle.svg");
+    min-height: 57vh;
+}
 .topline{
 
    display:block;
@@ -55,6 +59,7 @@ section.experience{
    font-size:35px;
    letter-spacing:5px;
    color:#3d535f;
+   left: -15px;
 }
 /* .topline::after{
    position:absolute;
@@ -67,6 +72,10 @@ section.experience{
 .myName{
     text-transform: none !important;
 }
+.Myskills{
+    min-height: 57vh;
+}
+
 .heading{
     font-size: 44px;
     padding-bottom: 2rem;
@@ -315,6 +324,8 @@ header .follow a:hover{
 }
 .DetailsWrapper span:nth-child(2){
     color: #fffc;
+    padding-right: unset;
+    padding-left: 3px;
 }
 .about{
 	width: 100%;
@@ -711,7 +722,7 @@ padding:0 1.5rem;
   }
 .galcontainer{
     width: 100%;
-    min-height: 100vh;
+    /* min-height: 100vh; */
    
   
     animation: taadaa 2s infinite;
@@ -719,7 +730,12 @@ padding:0 1.5rem;
 
   
 .gallery img{
-    width:100%;
+        margin-top: 12px; 
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+   
      
 }
 #instafeed-container{
@@ -845,7 +861,11 @@ justify-content:center;
     body{
         padding: 0;
     }
-
+    .gallery img{
+        width: 100%;
+        margin-top: unset;
+        margin-left: unset;
+    }
     #menu-bars{
         display: initial;
     }
@@ -882,6 +902,11 @@ justify-content:center;
     header{
         width:100%;
     }
+    .gallery img{
+        width: 100%;
+        margin-top: unset;
+        margin-left: unset;
+    }
 
     .about{
         display: inline-table;
@@ -909,6 +934,9 @@ justify-content:center;
 .headingBlack,.heading{
     font-size: 30px;
     color: white;
+}
+.Myskills {
+    min-height: 36vh;
 }
 
 

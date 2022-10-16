@@ -22,8 +22,8 @@ document.addEventListener("DOMContentLoaded", () => {
       }
 
     });
-    inputField.addEventListener("keydown", function (e) {
-      if (e.code === "Enter") {
+    inputField.addEventListener("keyup", function (e) {
+      if (e.which === 13) {
         let input = inputField.value;
         inputField.value = "";
         output(input);
@@ -66,13 +66,21 @@ document.addEventListener("DOMContentLoaded", () => {
     //15
     ["school","school name"],
     //16
-    ["are you single","committed","lover","girlfriend"],
+    ["are you single","committed","lover","girlfriend","single"],
     //17
     ["friends","close ones","friend","best ones"],
     //18
     ["job","working in","working","designation","position","work"],
     //19
     ["dob","date of birth","age"],
+    //20
+    ["Strengths","My Strengths"],
+    //21
+    ["email","gmail","contact","number"],
+    //22
+    ["dream","long term goal","goal"],
+    //23
+    ["hero","favorite","role model"],
     
     
   ];
@@ -122,6 +130,14 @@ document.addEventListener("DOMContentLoaded", () => {
     ["TCS","Tata Consultancy Services","Software Associate"],
     //19
     ["21/06/2001[21]"],
+    //20
+    ["I will take up the challenge","I will do it in a good way"],
+    //21
+    ["rajaybe@gmail.com"],
+    //22
+    ["Well settle with my family and enjoy with them😄"],
+    //23
+    ["Sundar pichai","MS Dhoni"],
     
   ];
   
@@ -150,7 +166,10 @@ document.addEventListener("DOMContentLoaded", () => {
       .replace(/whats/g, "what is")
       .replace(/please /g, "")
       .replace(/ please/g, "")
+      .replace(/ajay /g,"")
+      .replace(/ ajay /g,"")
       .replace(/r u/g, "are you");
+      console.log(text);
   
     if (compare(trigger, reply, text)) {
       // Search for exact match in triggers
