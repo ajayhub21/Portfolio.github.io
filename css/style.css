@@ -931,6 +931,9 @@ justify-content:center;
 .about-text p,.about-text div{
     font-size: 16px;
 }
+#black{
+    color: black !important;
+}
 .headingBlack,.heading{
     font-size: 30px;
     color: white;

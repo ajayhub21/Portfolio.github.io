@@ -66,11 +66,11 @@ document.addEventListener("DOMContentLoaded", () => {
     //15
     ["school","school name"],
     //16
-    ["are you single","committed","lover","girlfriend","single"],
+    ["are you single","committed","lover","girlfriend","single","wife"],
     //17
-    ["friends","close ones","friend","best ones"],
+    ["friends","close ones","friend","best ones","friendship"],
     //18
-    ["job","working in","working","designation","position","work"],
+    ["job","working in","working","designation","position","work","are you a playboy","playboy"],
     //19
     ["dob","date of birth","age"],
     //20
@@ -81,7 +81,9 @@ document.addEventListener("DOMContentLoaded", () => {
     ["dream","long term goal","goal"],
     //23
     ["hero","favorite","role model"],
-    
+    //24
+    ["sports","game"]
+   
     
   ];
   
@@ -138,6 +140,8 @@ document.addEventListener("DOMContentLoaded", () => {
     ["Well settle with my family and enjoy with them😄"],
     //23
     ["Sundar pichai","MS Dhoni"],
+    //24
+    ["Cricket,Badmiton,Chess"]
     
   ];
   
