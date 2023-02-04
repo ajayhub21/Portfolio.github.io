@@ -111,15 +111,15 @@ document.addEventListener("DOMContentLoaded", () => {
     //8
     ["Java,Html5,CSS3,JavaScript,Php,MySQL,jQuery","Java,Html5,CSS3,JavaScript,Php,MySQL,jQuery","Java,Html5,CSS3,JavaScript,Php,MySQL,jQuery"],
     //9
-    ["I'm Natasha😊", "Natasha😊"],
+    ["I'm Tessa😊", "Tessa😊"],
     //10
     ["Panimalar institute of Technology[PIT]","PIT"],
     //11
-    ["8.4","84%"],
+    ["8.56","85.6%"],
     //12
     ["1)Ciarpro Tech Pvt Limited,2)Megam Solution,3)Oneyes Technologies"],
     //13
-    ["6.4","64%"],
+    ["331","64%"],
     //14
     ["8.8","88%"],
     //15
@@ -127,7 +127,7 @@ document.addEventListener("DOMContentLoaded", () => {
     //16
     ["Single!!Ready to Mingle❤️","Single","Happy😊"],
     //17
-    ["ASH","Abishek,Shylu,Haridha","Evane,Eruma,Minion"],
+    ["ASH"],
     //18
     ["TCS","Tata Consultancy Services","Software Associate"],
     //19
@@ -146,7 +146,7 @@ document.addEventListener("DOMContentLoaded", () => {
   ];
   
   const alternatives = [
-    "Same",
+    
     "Go on...",
     "Try again",
     "I'm listening...",
@@ -154,7 +154,7 @@ document.addEventListener("DOMContentLoaded", () => {
   ];
   const suggestion = [
     //0
-    ["hi", "what is going on", "school"],
+    ["hi", "My Strengths", "school"],
     //1
     ["your name","are you single?","Skils"],
     ["Class12","Class10","College"],

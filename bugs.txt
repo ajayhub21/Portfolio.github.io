@@ -1,0 +1,5 @@
+1.Alignment of the home page text and image is not aligned properly
+2.about me img is not looking nice and try to make good alignment
+3.we can close and hide the nav bar
+4.Try to find new design for gallery
+5.My	

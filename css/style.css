@@ -35,13 +35,20 @@ html{
 }
 
 body{
-    background: #ffff;
+    background: #ffff !important;
     padding-left: 30rem;
+   
 }
 
 section{
-    padding:1rem 5%;
+    padding: 0 3px 5% 5%;
     min-height: 100vh;
+    
+}
+section.home{
+    background-image: url("../images/wave-haikei.svg");
+    background-repeat: no-repeat;
+    background-size:cover;
 }
 section.experience{
     width: 100%;
@@ -51,6 +58,8 @@ section.experience{
 #vibe{
     background-image: url("../images/Sprinkle.svg");
     min-height: 57vh;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 .topline{
 
@@ -206,10 +215,12 @@ header .follow a:hover{
     display: none;
 }
 
+
+
 .home .revea{
     display: flex;
     align-items: center;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
     gap:1.5rem;
 }
 
@@ -889,6 +900,9 @@ justify-content:center;
         /* font-size: 30px; */
         color: white;
     }
+    .home .revea{
+        flex-wrap: wrap;
+    }
 
 }
 
@@ -917,7 +931,7 @@ justify-content:center;
 }
 .about-text h5 {
     font-size: 22px;
-    margin-left: 95px;
+    margin-left: 68px;
 }
 .about-text p{
     margin-left: 39px;
@@ -976,6 +990,9 @@ justify-content:center;
     }
     .row-2 .skills .progress h3{
         color: white;
+    }
+    .home .revea{
+        flex-wrap: wrap;
     }
 
 }
