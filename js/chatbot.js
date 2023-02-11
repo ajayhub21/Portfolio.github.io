@@ -74,7 +74,7 @@ document.addEventListener("DOMContentLoaded", () => {
     //19
     ["dob","date of birth","age"],
     //20
-    ["Strengths","My Strengths"],
+    ["strengths","my strengths"],
     //21
     ["email","gmail","contact","number"],
     //22
@@ -133,7 +133,7 @@ document.addEventListener("DOMContentLoaded", () => {
     //19
     ["21/06/2001[21]"],
     //20
-    ["I will take up the challenge","I will do it in a good way"],
+    ["I will take up the challenge","I will do it in a positive way"],
     //21
     ["rajaybe@gmail.com"],
     //22
@@ -150,7 +150,7 @@ document.addEventListener("DOMContentLoaded", () => {
     "Go on...",
     "Try again",
     "I'm listening...",
-    "Bro...",
+    
   ];
   const suggestion = [
     //0
@@ -159,6 +159,7 @@ document.addEventListener("DOMContentLoaded", () => {
     ["your name","are you single?","Skils"],
     ["Class12","Class10","College"],
     ["Working In","Internship","cgpa"],
+    ["role model","sports","dream"],
   
   ];
   
