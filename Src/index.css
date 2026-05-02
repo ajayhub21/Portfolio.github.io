@@ -1,0 +1,10 @@
+/* Minimal root styles - main design system is in styles/global.css */
+
+#root {
+  min-height: 100vh;
+}
+
+.app {
+  position: relative;
+  min-height: 100vh;
+}

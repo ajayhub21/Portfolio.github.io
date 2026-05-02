@@ -1,0 +1,51 @@
+// Experience and education timeline data from the original portfolio
+export const experience = [
+  {
+    id: 1,
+    period: '2015 - 2016',
+    title: 'Class 10th (88%)',
+    organization: 'Amritha Vidyalyam CBSE School Nagapattinam',
+    type: 'education',
+    icon: 'FaGraduationCap',
+  },
+  {
+    id: 2,
+    period: '2017 - 2018',
+    title: 'Class 12th (64.3%)',
+    organization: 'Amritha Vidyalyam CBSE School Nagapattinam',
+    type: 'education',
+    icon: 'FaGraduationCap',
+  },
+  {
+    id: 3,
+    period: '2018 - 2022',
+    title: 'BTech Information Technology (84%)',
+    organization: 'Panimalar Institute of Technology, Poonamallee',
+    type: 'education',
+    icon: 'FaUniversity',
+  },
+  {
+    id: 4,
+    period: 'June 2019',
+    title: 'Java Development',
+    organization: 'Oneyes Technologies',
+    type: 'work',
+    icon: 'FaBriefcase',
+  },
+  {
+    id: 5,
+    period: 'Sept 2020',
+    title: 'Product Development',
+    organization: 'Megam Solutions',
+    type: 'work',
+    icon: 'FaBriefcase',
+  },
+  {
+    id: 6,
+    period: 'Apr 2021',
+    title: 'PHP/MySQL Development',
+    organization: 'Ciarpro Tech Pvt Limited',
+    type: 'work',
+    icon: 'FaBriefcase',
+  },
+]

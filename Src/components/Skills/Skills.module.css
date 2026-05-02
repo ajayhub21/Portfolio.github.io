@@ -1,0 +1,100 @@
+.skills { padding: var(--space-24) 0; }
+
+/* Progress Bars */
+.progressSection {
+  max-width: 700px;
+  margin: 0 auto var(--space-16);
+}
+
+.progressItem { margin-bottom: var(--space-6); }
+
+.progressHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-2);
+}
+
+.progressName {
+  font-size: var(--font-base);
+  font-weight: 600;
+  color: var(--text-primary);
+  text-transform: capitalize;
+}
+
+.progressPercent {
+  font-size: var(--font-sm);
+  font-weight: 700;
+  color: var(--color-primary-light);
+}
+
+.progressTrack {
+  width: 100%;
+  height: 10px;
+  background: var(--bg-tertiary);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+}
+
+.progressFill {
+  height: 100%;
+  border-radius: var(--radius-full);
+  transition: width 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  position: relative;
+}
+
+.progressFill::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 6px;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: var(--radius-full);
+}
+
+/* Tech Stack Cards */
+.techGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-4);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.techCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-6) var(--space-4);
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-xl);
+  transition: all var(--transition-base);
+  cursor: default;
+}
+
+.techCard:hover {
+  transform: translateY(-5px);
+  border-color: var(--border-hover);
+  box-shadow: var(--shadow-glow);
+}
+
+.techIcon { font-size: 2.5rem; transition: transform var(--transition-base); }
+.techCard:hover .techIcon { transform: scale(1.15); }
+
+.techName {
+  font-size: var(--font-sm);
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+@media (max-width: 768px) {
+  .techGrid { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (max-width: 480px) {
+  .techGrid { grid-template-columns: repeat(2, 1fr); }
+}
