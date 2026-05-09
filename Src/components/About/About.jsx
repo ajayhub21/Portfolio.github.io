@@ -33,7 +33,7 @@ const About = () => {
               <ProfileCard
                 name={personalInfo.fullName}
                 title={personalInfo.title}
-                handle="ajayraj"
+                handle="ajay.__.aj"
                 status="Frontend Developer"
                 contactText="Contact Me"
                 avatarUrl={personalInfo.aboutImage}
@@ -50,17 +50,17 @@ const About = () => {
           </ScrollReveal>
 
           <ScrollReveal direction="right" delay={0.2}>
-              <div className={styles.contentSection}>
-                <p className={styles.bio}>{personalInfo.aboutBio}</p>
-                {personalInfo.aboutHighlights && (
-                  <ul className={styles.highlightsList}>
-                    {personalInfo.aboutHighlights.map((highlight, index) => (
-                      <li key={index} className={styles.highlightItem}>{highlight}</li>
-                    ))}
-                  </ul>
-                )}
+            <div className={styles.contentSection}>
+              <p className={styles.bio}>{personalInfo.aboutBio}</p>
+              {personalInfo.aboutHighlights && (
+                <ul className={styles.highlightsList}>
+                  {personalInfo.aboutHighlights.map((highlight, index) => (
+                    <li key={index} className={styles.highlightItem}>{highlight}</li>
+                  ))}
+                </ul>
+              )}
 
-                <div className={styles.infoGrid}>
+              <div className={styles.infoGrid}>
                 {infoItems.map((item) => (
                   <div key={item.label} className={styles.infoItem}>
                     <span className={styles.infoLabel}>{item.label}</span>
