@@ -1,3 +1,8 @@
+/* ===================================================
+   CLEAN PROFESSIONAL HERO — DAY / NIGHT THEME
+   Calm morning sky ☀️  ↔  Peaceful night sky 🌙
+   =================================================== */
+
 .hero {
   position: relative;
   min-height: 100vh;
@@ -5,63 +10,275 @@
   align-items: center;
   overflow: hidden;
   padding-top: var(--navbar-height);
+  padding-bottom: 5rem;
 }
 
-/* Animated gradient orbs */
-.bgOrbs { position: absolute; inset: 0; overflow: hidden; pointer-events: none; }
+/* ===================
+   SCENE WRAPPER
+   =================== */
+.scene {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+}
 
-.orb1, .orb2, .orb3 {
+/* ===================
+   SKY — smooth gradient transition
+   =================== */
+.sky {
+  position: absolute;
+  inset: 0;
+  transition: background 1s ease-in-out;
+}
+
+/* Light mode: calm morning sky */
+.skyLight {
+  background: linear-gradient(
+    180deg,
+    #7EC8E3 0%,
+    #A8DCED 20%,
+    #C5E8F5 40%,
+    #DFF1FA 60%,
+    #EEF7FC 80%,
+    #FFFFFF 100%
+  );
+}
+
+/* Dark mode: deep navy to near-black */
+.skyDark {
+  background: linear-gradient(
+    180deg,
+    #0B0F1A 0%,
+    #0E1525 20%,
+    #111D33 40%,
+    #152542 60%,
+    #1A2E50 80%,
+    #1E3660 100%
+  );
+}
+
+/* ===================
+   SUNLIGHT GLOW — top-right ambient light
+   =================== */
+.sunlightGlow {
+  position: absolute;
+  top: -80px;
+  right: -80px;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(255, 223, 130, 0.35) 0%,
+    rgba(255, 200, 80, 0.15) 30%,
+    rgba(255, 180, 50, 0.05) 55%,
+    transparent 75%
+  );
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  pointer-events: none;
+}
+
+.sunlightGlowVisible {
+  opacity: 1;
+}
+
+/* ===================
+   SUN — minimal, realistic circle
+   =================== */
+.sunWrapper {
+  position: absolute;
+  top: 10%;
+  right: 14%;
+  z-index: 2;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+  pointer-events: none;
+}
+
+.sunVisible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.sun {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle at 40% 40%,
+    #FFF7ED 0%,
+    #FDE68A 25%,
+    #FBBF24 55%,
+    #F59E0B 100%
+  );
+  box-shadow:
+    0 0 40px rgba(251, 191, 36, 0.4),
+    0 0 80px rgba(245, 158, 11, 0.2),
+    0 0 120px rgba(251, 191, 36, 0.1);
+  filter: blur(0.5px);
+  animation: sunFloat 20s ease-in-out infinite alternate;
+}
+
+@keyframes sunFloat {
+  0%   { transform: translateY(0) translateX(0); }
+  50%  { transform: translateY(-8px) translateX(3px); }
+  100% { transform: translateY(2px) translateX(-2px); }
+}
+
+/* ===================
+   MOON — clean, simple, realistic
+   =================== */
+.moonWrapper {
+  position: absolute;
+  top: 10%;
+  right: 14%;
+  z-index: 2;
+  opacity: 0;
+  transform: translateY(-30px);
+  transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+  pointer-events: none;
+}
+
+.moonVisible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.moon {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle at 38% 38%,
+    #FFFFFF 0%,
+    #F4F7FF 40%,
+    #E8ECF5 100%
+  );
+  box-shadow:
+    0 0 30px rgba(244, 247, 255, 0.25),
+    0 0 60px rgba(220, 230, 255, 0.12),
+    0 0 100px rgba(200, 215, 255, 0.06);
+  animation: moonDrift 30s ease-in-out infinite alternate;
+}
+
+@keyframes moonDrift {
+  0%   { transform: translateY(0) translateX(0); }
+  100% { transform: translateY(-6px) translateX(4px); }
+}
+
+/* ===================
+   STARS — minimal, sparse, subtle
+   =================== */
+.starsContainer {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 1.2s ease-in-out;
+  pointer-events: none;
+}
+
+.starsVisible {
+  opacity: 1;
+}
+
+.star {
   position: absolute;
   border-radius: 50%;
-  filter: blur(80px);
-  opacity: 0.15;
+  background: #FFFFFF;
+  animation: starTwinkle 4s ease-in-out infinite alternate;
 }
 
-.orb1 {
-  width: 600px; height: 600px;
-  background: var(--color-primary);
-  top: -10%; right: -5%;
-  animation: float 8s ease-in-out infinite;
+/* Opacity-only twinkle — no scale, no movement */
+@keyframes starTwinkle {
+  0%   { opacity: 0.25; }
+  50%  { opacity: 0.8; }
+  100% { opacity: 0.35; }
 }
 
-.orb2 {
-  width: 400px; height: 400px;
-  background: var(--color-accent);
-  bottom: -5%; left: -5%;
-  animation: float 10s ease-in-out infinite reverse;
+/* ===================
+   FLOATING PARTICLES
+   =================== */
+.particlesContainer {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  overflow: hidden;
 }
 
-.orb3 {
-  width: 300px; height: 300px;
-  background: #06B6D4;
-  top: 50%; left: 40%;
-  animation: float 12s ease-in-out infinite 2s;
+.particle {
+  position: absolute;
+  border-radius: 50%;
+  animation: particleFloat linear infinite;
+  opacity: 0.4;
 }
 
-@keyframes float {
-  0%, 100% { transform: translateY(0) scale(1); }
-  50% { transform: translateY(-30px) scale(1.05); }
+.particleLight {
+  background: radial-gradient(circle, rgba(13, 148, 136, 0.5), transparent 70%);
+  box-shadow: 0 0 6px rgba(13, 148, 136, 0.3);
 }
 
+.particleDark {
+  background: radial-gradient(circle, rgba(103, 232, 249, 0.5), transparent 70%);
+  box-shadow: 0 0 6px rgba(103, 232, 249, 0.3);
+}
+
+@keyframes particleFloat {
+  0%   { transform: translateY(0) translateX(0); opacity: 0; }
+  10%  { opacity: 0.4; }
+  50%  { transform: translateY(-60px) translateX(20px); opacity: 0.6; }
+  90%  { opacity: 0.2; }
+  100% { transform: translateY(-120px) translateX(-10px); opacity: 0; }
+}
+
+/* ===================
+   MAGNETIC BUTTON WRAP
+   =================== */
+.magneticWrap {
+  display: inline-block;
+}
+
+/* ===================
+   CONTENT LAYER
+   =================== */
 .container {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: var(--space-16);
   position: relative;
-  z-index: 1;
+  z-index: 10;
 }
 
-/* Content */
-.content { flex: 1; max-width: 600px; }
+.content {
+  flex: 1;
+  max-width: 620px;
+}
 
 .greeting {
   display: inline-block;
   font-size: var(--font-lg);
-  color: var(--color-primary-light);
-  font-weight: 500;
+  font-weight: 700;
   margin-bottom: var(--space-2);
   text-transform: capitalize;
+  transition: color 1s ease-in-out, text-shadow 1s ease-in-out;
+}
+
+/* Light mode text */
+.greetingLight {
+  color: #0D9488;
+  text-shadow: none;
+}
+
+/* Dark mode text */
+.greetingDark {
+  color: #67E8F9;
+  text-shadow: 0 0 20px rgba(103, 232, 249, 0.3);
 }
 
 .name {
@@ -69,15 +286,31 @@
   font-weight: 900;
   line-height: 1.1;
   margin-bottom: var(--space-3);
-  color: var(--text-primary);
   letter-spacing: -0.03em;
+  transition: color 1s ease-in-out, text-shadow 1s ease-in-out;
+}
+
+.nameLight {
+  color: #1E293B;
+  text-shadow: none;
+}
+
+.nameDark {
+  color: #F0F4FF;
+  text-shadow: 0 2px 30px rgba(0, 0, 0, 0.5);
 }
 
 .nameHighlight {
-  background: var(--gradient-primary);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  transition: opacity 1s ease-in-out, color 1s ease-in-out;
+}
+
+.nameHighlightLight {
+  color: #0891B2;
+}
+
+.nameHighlightDark {
+  color: #67E8F9;
+  text-shadow: 0 0 15px rgba(103, 232, 249, 0.4);
 }
 
 .titleWrapper {
@@ -89,14 +322,33 @@
 
 .title {
   font-size: var(--font-2xl);
-  font-weight: 600;
-  color: var(--text-secondary);
+  font-weight: 700;
+  transition: color 1s ease-in-out;
+}
+
+.titleLight {
+  color: #475569;
+}
+
+.titleDark {
+  color: #C8D6E5;
+  text-shadow: 0 1px 15px rgba(0, 0, 0, 0.4);
 }
 
 .titleCursor {
   font-size: var(--font-2xl);
-  color: var(--color-primary);
+  line-height: 1;
+  transform: translateY(-2px);
+  transition: color 1s ease-in-out;
   animation: blink 1s step-end infinite;
+}
+
+.titleCursorLight {
+  color: #0D9488;
+}
+
+.titleCursorDark {
+  color: #67E8F9;
 }
 
 @keyframes blink {
@@ -105,15 +357,31 @@
 
 .bio {
   font-size: var(--font-lg);
-  color: var(--text-secondary);
+  font-weight: 500;
   line-height: 1.8;
   margin-bottom: var(--space-8);
   max-width: 540px;
+  transition: color 1s ease-in-out;
 }
 
-.cta { display: flex; gap: var(--space-4); flex-wrap: wrap; }
+.bioLight {
+  color: #64748B;
+}
 
-/* Image */
+.bioDark {
+  color: #A0B4C8;
+  text-shadow: 0 1px 10px rgba(0, 0, 0, 0.3);
+}
+
+.cta {
+  display: flex;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+}
+
+/* ===================
+   PROFILE IMAGE
+   =================== */
 .imageWrapper {
   flex: 1;
   display: flex;
@@ -127,11 +395,23 @@
   position: absolute;
   width: 100%;
   height: 100%;
-  background: var(--gradient-primary);
   border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
   filter: blur(40px);
-  opacity: 0.2;
-  animation: float 6s ease-in-out infinite;
+  animation: pulseGlow 6s ease-in-out infinite alternate;
+  transition: background 1s ease-in-out;
+}
+
+.imageGlowLight {
+  background: radial-gradient(circle, rgba(13, 148, 136, 0.2) 0%, transparent 70%);
+}
+
+.imageGlowDark {
+  background: radial-gradient(circle, rgba(45, 212, 191, 0.3) 0%, transparent 70%);
+}
+
+@keyframes pulseGlow {
+  0%   { opacity: 0.2; transform: scale(1); }
+  100% { opacity: 0.4; transform: scale(1.05); }
 }
 
 .imageContainer {
@@ -140,8 +420,21 @@
   height: 380px;
   border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
   overflow: hidden;
-  border: 3px solid rgba(59, 130, 246, 0.3);
-  box-shadow: 0 0 40px rgba(59, 130, 246, 0.15);
+  transition: border-color 1s ease-in-out, box-shadow 1s ease-in-out;
+}
+
+.imageContainerLight {
+  border: 3px solid rgba(13, 148, 136, 0.25);
+  box-shadow:
+    0 0 40px rgba(13, 148, 136, 0.08),
+    0 0 80px rgba(6, 182, 212, 0.04);
+}
+
+.imageContainerDark {
+  border: 3px solid rgba(103, 232, 249, 0.3);
+  box-shadow:
+    0 0 40px rgba(103, 232, 249, 0.1),
+    0 0 80px rgba(45, 212, 191, 0.05);
 }
 
 .image {
@@ -150,32 +443,70 @@
   object-fit: cover;
 }
 
-/* Scroll Indicator */
+/* ===================
+   SCROLL INDICATOR
+   =================== */
 .scrollIndicator {
   position: absolute;
   bottom: 2rem;
   left: 50%;
   transform: translateX(-50%);
-  color: var(--text-tertiary);
   font-size: var(--font-sm);
   cursor: pointer;
-  transition: color var(--transition-fast);
-  z-index: 1;
+  z-index: 10;
+  transition: color 1s ease-in-out;
 }
 
-.scrollIndicator:hover { color: var(--color-primary); }
+.scrollIndicatorLight {
+  color: rgba(71, 85, 105, 0.5);
+}
 
+.scrollIndicatorLight:hover {
+  color: #0D9488;
+}
+
+.scrollIndicatorDark {
+  color: rgba(200, 220, 255, 0.6);
+}
+
+.scrollIndicatorDark:hover {
+  color: #67E8F9;
+}
+
+/* ===================
+   RESPONSIVE
+   =================== */
 @media (max-width: 968px) {
-  .container { flex-direction: column-reverse; text-align: center; gap: var(--space-8); }
+  .container {
+    flex-direction: column-reverse;
+    text-align: center;
+    gap: var(--space-8);
+  }
   .content { max-width: 100%; }
   .name { font-size: var(--font-5xl); }
   .titleWrapper { justify-content: center; }
   .bio { margin-left: auto; margin-right: auto; }
   .cta { justify-content: center; }
   .imageContainer { width: 280px; height: 280px; }
+
+  .sunWrapper,
+  .moonWrapper {
+    top: 5%;
+    right: 5%;
+  }
+  .sun { width: 60px; height: 60px; }
+  .moon { width: 55px; height: 55px; }
 }
 
 @media (max-width: 480px) {
   .name { font-size: var(--font-4xl); }
-  .cta { flex-direction: column; align-items: stretch; }
+  .cta { flex-direction: row; justify-content: center; }
+
+  .sunWrapper,
+  .moonWrapper {
+    top: 4%;
+    right: 2%;
+  }
+  .sun { width: 50px; height: 50px; }
+  .moon { width: 45px; height: 45px; }
 }

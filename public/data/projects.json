@@ -1,55 +1,19 @@
 [
   {
     "id": 1,
-    "title": "Portfolio Website",
-    "description": "A personal portfolio website built with HTML, CSS, and JavaScript featuring custom cursor effects and responsive design.",
+    "title": "Task Management System",
+    "description": "A comprehensive role-based task management system with status tracking and categories, built during internship at Ciarpro Tech.",
     "image": "/images/img-1.jpg",
-    "tags": ["HTML", "CSS", "JavaScript"],
+    "tags": ["HTML", "CSS", "JavaScript", "PHP", "MySQL"],
     "liveUrl": "#",
     "githubUrl": "#"
   },
   {
     "id": 2,
-    "title": "E-Commerce Platform",
-    "description": "A full-stack e-commerce web application built with PHP and MySQL featuring product management and user authentication.",
+    "title": "Population Trend Prediction",
+    "description": "A machine learning model for predicting population trends involving data preprocessing and forecasting, built during internship at Infosys.",
     "image": "/images/img-2.png",
-    "tags": ["PHP", "MySQL", "CSS"],
-    "liveUrl": "#",
-    "githubUrl": "#"
-  },
-  {
-    "id": 3,
-    "title": "Java Application",
-    "description": "A Java-based desktop application developed during internship at Oneyes Technologies with data processing capabilities.",
-    "image": "/images/img-3.png",
-    "tags": ["Java", "OOP"],
-    "liveUrl": "#",
-    "githubUrl": "#"
-  },
-  {
-    "id": 4,
-    "title": "Product Management Tool",
-    "description": "A product development tool built during internship at Megam Solutions for managing product lifecycle and workflows.",
-    "image": "/images/img-4.png",
-    "tags": ["Web Development", "JavaScript"],
-    "liveUrl": "#",
-    "githubUrl": "#"
-  },
-  {
-    "id": 5,
-    "title": "Responsive Web App",
-    "description": "A modern responsive web application showcasing front-end development skills with smooth animations and transitions.",
-    "image": "/images/img-5.png",
-    "tags": ["HTML", "CSS", "JavaScript"],
-    "liveUrl": "#",
-    "githubUrl": "#"
-  },
-  {
-    "id": 6,
-    "title": "Database Management System",
-    "description": "A comprehensive database management system built with PHP and MySQL during internship at Ciarpro Tech.",
-    "image": "/images/img-6.png",
-    "tags": ["PHP", "MySQL", "JavaScript"],
+    "tags": ["Python", "Machine Learning", "Data Analysis"],
     "liveUrl": "#",
     "githubUrl": "#"
   }

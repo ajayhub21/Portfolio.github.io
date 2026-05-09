@@ -3,6 +3,7 @@ import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn, FaDownload } from 'r
 import SectionHeading from '../ui/SectionHeading'
 import ScrollReveal from '../ui/ScrollReveal'
 import Button from '../ui/Button'
+import ProfileCard from '../ProfileCard/ProfileCard'
 import styles from './About.module.css'
 
 const socialIcons = { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn }
@@ -29,27 +30,37 @@ const About = () => {
         <div className={styles.grid}>
           <ScrollReveal direction="left">
             <div className={styles.imageSection}>
-              <div className={styles.imageBorder}>
-                <img src={personalInfo.aboutImage} alt={personalInfo.fullName} className={styles.image} />
-              </div>
-              <div className={styles.socials}>
-                {personalInfo.socials.map((social) => {
-                  const Icon = socialIcons[social.icon]
-                  return (
-                    <a key={social.name} href={social.url} target="_blank" rel="noopener noreferrer" className={styles.socialLink} aria-label={social.name}>
-                      <Icon />
-                    </a>
-                  )
-                })}
-              </div>
+              <ProfileCard
+                name={personalInfo.fullName}
+                title={personalInfo.title}
+                handle="ajayraj"
+                status="Frontend Developer"
+                contactText="Contact Me"
+                avatarUrl={personalInfo.aboutImage}
+                showUserInfo={true}
+                enableTilt={false}
+                enableMobileTilt={false}
+                behindGlowEnabled={false}
+                innerGradient="linear-gradient(145deg,#0D948844 0%,#0891B244 100%)"
+                onContactClick={() => {
+                  document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })
+                }}
+              />
             </div>
           </ScrollReveal>
 
           <ScrollReveal direction="right" delay={0.2}>
-            <div className={styles.contentSection}>
-              <p className={styles.bio}>{personalInfo.aboutBio}</p>
+              <div className={styles.contentSection}>
+                <p className={styles.bio}>{personalInfo.aboutBio}</p>
+                {personalInfo.aboutHighlights && (
+                  <ul className={styles.highlightsList}>
+                    {personalInfo.aboutHighlights.map((highlight, index) => (
+                      <li key={index} className={styles.highlightItem}>{highlight}</li>
+                    ))}
+                  </ul>
+                )}
 
-              <div className={styles.infoGrid}>
+                <div className={styles.infoGrid}>
                 {infoItems.map((item) => (
                   <div key={item.label} className={styles.infoItem}>
                     <span className={styles.infoLabel}>{item.label}</span>

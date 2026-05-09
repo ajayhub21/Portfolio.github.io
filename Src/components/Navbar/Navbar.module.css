@@ -54,8 +54,8 @@
   position: relative;
   padding: 0.5rem 1rem;
   font-size: var(--font-sm);
-  font-weight: 500;
-  color: var(--text-secondary);
+  font-weight: 600;
+  color: var(--text-primary);
   background: none;
   border: none;
   cursor: pointer;
@@ -65,12 +65,12 @@
 }
 
 .navLink:hover {
-  color: var(--color-primary-light);
-  background: rgba(59, 130, 246, 0.05);
+  color: var(--color-primary-dark);
+  background: rgba(13, 148, 136, 0.1);
 }
 
 .navLink.active {
-  color: var(--color-primary);
+  color: var(--color-primary-dark);
 }
 
 .activeIndicator {
@@ -127,8 +127,29 @@
   color: var(--color-primary);
 }
 
+.mobileCloseBtn {
+  display: none;
+}
+
 @media (max-width: 768px) {
   .menuBtn { display: flex; }
+
+  .mobileCloseBtn {
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    background: none;
+    border: none;
+    color: var(--text-primary);
+    font-size: var(--font-2xl);
+    cursor: pointer;
+    display: block;
+    transition: color var(--transition-fast);
+  }
+
+  .mobileCloseBtn:hover {
+    color: var(--color-primary);
+  }
 
   .navLinks {
     position: fixed;

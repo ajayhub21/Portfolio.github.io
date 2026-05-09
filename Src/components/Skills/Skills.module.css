@@ -1,100 +1,102 @@
-.skills { padding: var(--space-24) 0; }
+.skills { padding: var(--space-12) 0; }
 
-/* Progress Bars */
-.progressSection {
-  max-width: 700px;
-  margin: 0 auto var(--space-16);
-}
-
-.progressItem { margin-bottom: var(--space-6); }
-
-.progressHeader {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: var(--space-2);
-}
-
-.progressName {
-  font-size: var(--font-base);
-  font-weight: 600;
-  color: var(--text-primary);
-  text-transform: capitalize;
-}
-
-.progressPercent {
-  font-size: var(--font-sm);
-  font-weight: 700;
-  color: var(--color-primary-light);
-}
-
-.progressTrack {
-  width: 100%;
-  height: 10px;
-  background: var(--bg-tertiary);
-  border-radius: var(--radius-full);
+/* Infinite Scrolling Marquee */
+.marqueeWrapper {
   overflow: hidden;
+  margin-bottom: var(--space-10);
+  mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
 }
 
-.progressFill {
-  height: 100%;
-  border-radius: var(--radius-full);
-  transition: width 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  position: relative;
-}
-
-.progressFill::after {
-  content: '';
-  position: absolute;
-  right: 0;
-  top: 0;
-  width: 6px;
-  height: 100%;
-  background: rgba(255, 255, 255, 0.4);
-  border-radius: var(--radius-full);
-}
-
-/* Tech Stack Cards */
-.techGrid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: var(--space-4);
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.techCard {
+.marqueeTrack {
   display: flex;
-  flex-direction: column;
+  gap: var(--space-6);
+  width: max-content;
+  animation: marqueeScroll 30s linear infinite;
+}
+
+.marqueeItem {
+  display: flex;
   align-items: center;
-  gap: var(--space-3);
-  padding: var(--space-6) var(--space-4);
-  background: var(--bg-card);
-  border: 1px solid var(--border-color);
-  border-radius: var(--radius-xl);
-  transition: all var(--transition-base);
-  cursor: default;
-}
-
-.techCard:hover {
-  transform: translateY(-5px);
-  border-color: var(--border-hover);
-  box-shadow: var(--shadow-glow);
-}
-
-.techIcon { font-size: 2.5rem; transition: transform var(--transition-base); }
-.techCard:hover .techIcon { transform: scale(1.15); }
-
-.techName {
+  gap: var(--space-2);
   font-size: var(--font-sm);
   font-weight: 600;
   color: var(--text-secondary);
+  white-space: nowrap;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
 }
 
-@media (max-width: 768px) {
-  .techGrid { grid-template-columns: repeat(3, 1fr); }
+.marqueeItem:hover {
+  opacity: 1;
 }
 
-@media (max-width: 480px) {
-  .techGrid { grid-template-columns: repeat(2, 1fr); }
+@keyframes marqueeScroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.categoriesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: var(--space-8);
+}
+
+.categoryCard {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-xl);
+  padding: var(--space-6);
+  transition: all var(--transition-base);
+  height: 100%;
+}
+
+.categoryCard:hover {
+  border-color: var(--border-hover);
+  box-shadow: var(--shadow-glow);
+  transform: translateY(-2px);
+}
+
+.categoryTitle {
+  font-size: var(--font-xl);
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: var(--space-6);
+  padding-bottom: var(--space-2);
+  border-bottom: 2px solid var(--border-color);
+}
+
+.skillsList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+}
+
+.skillItem {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: 0.5rem 1rem;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-full);
+  transition: all 0.3s ease;
+  cursor: default;
+}
+
+.skillItem:hover {
+  background: rgba(13, 148, 136, 0.12);
+  border-color: var(--color-primary);
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 4px 15px rgba(13, 148, 136, 0.2);
+}
+
+.skillIcon {
+  font-size: var(--font-lg);
+}
+
+.skillName {
+  font-size: var(--font-sm);
+  font-weight: 600;
+  color: var(--text-primary);
 }

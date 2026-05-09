@@ -20,7 +20,6 @@ const Projects = () => {
           <div className={styles.grid}>
             {[1, 2, 3].map((i) => (
               <div key={i} className={styles.skeleton}>
-                <div className={styles.skeletonImg} />
                 <div className={styles.skeletonContent}>
                   <div className={styles.skeletonLine} style={{ width: '60%' }} />
                   <div className={styles.skeletonLine} style={{ width: '100%' }} />

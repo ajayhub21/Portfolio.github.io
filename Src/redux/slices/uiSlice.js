@@ -17,6 +17,7 @@ const uiSlice = createSlice({
     theme: getInitialTheme(),
     mobileMenuOpen: false,
     activeSection: 'home',
+    soundEnabled: false,
   },
   reducers: {
     toggleTheme: (state) => {
@@ -33,8 +34,11 @@ const uiSlice = createSlice({
     setActiveSection: (state, action) => {
       state.activeSection = action.payload
     },
+    toggleSound: (state) => {
+      state.soundEnabled = !state.soundEnabled
+    }
   },
 })
 
-export const { toggleTheme, setTheme, setMobileMenu, setActiveSection } = uiSlice.actions
+export const { toggleTheme, setTheme, setMobileMenu, setActiveSection, toggleSound } = uiSlice.actions
 export default uiSlice.reducer

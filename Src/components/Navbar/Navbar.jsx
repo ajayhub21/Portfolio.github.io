@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
-import { toggleTheme, setMobileMenu } from '../../redux/slices/uiSlice'
-import { FaBars, FaTimes, FaSun, FaMoon } from 'react-icons/fa'
+import { toggleTheme, setMobileMenu, toggleSound } from '../../redux/slices/uiSlice'
+import { FaBars, FaTimes, FaSun, FaMoon, FaVolumeUp, FaVolumeMute } from 'react-icons/fa'
 import { useScrollTo } from '../../hooks/useScrollTo'
 import styles from './Navbar.module.css'
 
@@ -10,13 +10,13 @@ const navLinks = [
   { label: 'About', id: 'about' },
   { label: 'Skills', id: 'skills' },
   { label: 'Experience', id: 'experience' },
-  { label: 'Projects', id: 'projects' },
+  { label: 'Gallery', id: 'gallery' },
   { label: 'Contact', id: 'contact' },
 ]
 
 const Navbar = () => {
   const dispatch = useDispatch()
-  const { theme, mobileMenuOpen } = useSelector((state) => state.ui)
+  const { theme, mobileMenuOpen, soundEnabled } = useSelector((state) => state.ui)
   const [scrolled, setScrolled] = useState(false)
   const [activeSection, setActiveSection] = useState('home')
   const scrollTo = useScrollTo()
@@ -49,6 +49,10 @@ const Navbar = () => {
     dispatch(setMobileMenu(false))
   }
 
+  const handleThemeToggle = () => {
+    dispatch(toggleTheme())
+  }
+
   return (
     <nav className={`${styles.navbar} ${scrolled ? styles.scrolled : ''}`} id="main-nav">
       <div className={styles.container}>
@@ -57,6 +61,9 @@ const Navbar = () => {
         </button>
 
         <div className={`${styles.navLinks} ${mobileMenuOpen ? styles.open : ''}`}>
+          <button className={styles.mobileCloseBtn} onClick={() => dispatch(setMobileMenu(false))} aria-label="Close menu">
+            <FaTimes />
+          </button>
           {navLinks.map((link) => (
             <button
               key={link.id}
@@ -70,7 +77,10 @@ const Navbar = () => {
         </div>
 
         <div className={styles.actions}>
-          <button className={styles.themeBtn} onClick={() => dispatch(toggleTheme())} aria-label="Toggle theme">
+          <button className={styles.themeBtn} onClick={() => dispatch(toggleSound())} aria-label="Toggle sound">
+            {soundEnabled ? <FaVolumeUp /> : <FaVolumeMute />}
+          </button>
+          <button className={styles.themeBtn} onClick={handleThemeToggle} aria-label="Toggle theme">
             {theme === 'dark' ? <FaSun /> : <FaMoon />}
           </button>
           <button className={styles.menuBtn} onClick={() => dispatch(setMobileMenu(!mobileMenuOpen))} aria-label="Toggle menu">

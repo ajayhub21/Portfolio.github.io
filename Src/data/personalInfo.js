@@ -3,41 +3,36 @@ export const personalInfo = {
   name: 'Ajay',
   lastName: 'R',
   fullName: 'Ajay R',
-  title: 'Developer',
+  title: 'Frontend Developer (React.js)',
   greeting: 'Hi there...',
   dob: '21/06/2001',
   gender: 'Male',
   language: 'English',
-  work: 'Intern at Infosys',
-  phone: '9787105400',
+  work: 'Frontend Developer at TCS',
+  phone: '+91-9787105400',
   email: 'rajaybe@gmail.com',
-  district: 'Nagapattinam',
+  district: 'Chennai',
   state: 'Tamil Nadu',
-  country: 'India',
+  country: 'India (Open to Relocation)',
   profileImage: '/images/ajay2.png',
   aboutImage: '/images/ajay.png',
   resumeUrl: '/assets/AjayCV.docx',
 
   // Bio text from the original site
   heroBio:
-    'Born and raised in Nagapattinam. I have done my schooling in Amritha Vidyalyam CBSE Senior Secondary School and now pursuing BTech from Panimalar Institute of Technology.',
+    'Frontend Developer with 3+ years of experience building scalable and responsive web applications.',
   aboutBio:
-    'I have done my schooling in Amritha Vidyalyam CBSE Senior Secondary School and pursued my BTech from Panimalar Institute of Technology. I did my internship at Megam Solutions and Ciarpro Tech Private Limited, where I gained real-world skills and technical expertise. Technologies I have worked with include Front-end development (HTML, CSS, JavaScript) and PHP/MySQL. My strengths include taking challenges head-on and maintaining a balanced perspective on success and failure. I am a quick learner who believes in smart work.',
+    'Frontend Developer with 3+ years of experience building scalable and responsive web applications using React.js, JavaScript (ES6+), HTML5, and CSS3. Experienced in developing Single Page Applications (SPA), integrating RESTful APIs, and implementing real-time features using SignalR and Azure Web PubSub. Proficient in unit testing with Jest and React Testing Library.',
+  aboutHighlights: [
+    '3+ years experience',
+    'Strong in React ecosystem',
+    'Real-time app expertise'
+  ],
   shortTermGoal: 'Want a platform where I can grow my career.',
   longTermGoal: 'To be well settled with my family and enjoy life with them.',
 
   // Social links from the original portfolio
   socials: [
-    {
-      name: 'Facebook',
-      url: 'https://www.facebook.com/profile.php?id=100055037331714',
-      icon: 'FaFacebookF',
-    },
-    {
-      name: 'Twitter',
-      url: 'https://twitter.com/Ajayajkannan004',
-      icon: 'FaTwitter',
-    },
     {
       name: 'Instagram',
       url: 'https://www.instagram.com/ajay.__.aj/',

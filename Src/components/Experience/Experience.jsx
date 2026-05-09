@@ -29,6 +29,13 @@ const Experience = () => {
                     </span>
                     <h3 className={styles.cardTitle}>{item.title}</h3>
                     <p className={styles.cardOrg}>{item.organization}</p>
+                    {item.responsibilities && item.responsibilities.length > 0 && (
+                      <ul className={styles.responsibilitiesList}>
+                        {item.responsibilities.map((resp, idx) => (
+                          <li key={idx} className={styles.respItem}>{resp}</li>
+                        ))}
+                      </ul>
+                    )}
                   </div>
                 </div>
               </ScrollReveal>

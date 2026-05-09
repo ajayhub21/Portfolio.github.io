@@ -1,0 +1,44 @@
+.cursorDot {
+  position: fixed;
+  width: 8px;
+  height: 8px;
+  background-color: var(--color-primary-light);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  transition: width 0.2s, height 0.2s, background-color 0.2s;
+}
+
+.cursorGlow {
+  position: fixed;
+  width: 40px;
+  height: 40px;
+  background: radial-gradient(circle, rgba(45, 212, 191, 0.4) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9998;
+  transform: translate(-50%, -50%);
+  transition: width 0.3s, height 0.3s;
+}
+
+.pointer {
+  width: 12px;
+  height: 12px;
+  background-color: #fff;
+}
+
+.pointerGlow {
+  width: 60px;
+  height: 60px;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.3) 0%, transparent 70%);
+}
+
+/* Hide default cursor on body when dark mode is active */
+:global(body[data-theme='dark']) {
+  cursor: none;
+}
+:global(body[data-theme='dark']) a,
+:global(body[data-theme='dark']) button {
+  cursor: none;
+}

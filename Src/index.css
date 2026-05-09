@@ -1,5 +1,9 @@
 /* Minimal root styles - main design system is in styles/global.css */
 
+html {
+  scroll-behavior: smooth;
+}
+
 #root {
   min-height: 100vh;
 }
@@ -7,4 +11,16 @@
 .app {
   position: relative;
   min-height: 100vh;
+}
+
+/* Scroll Progress Bar */
+.scrollProgress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  background: var(--gradient-primary);
+  z-index: 9999;
+  transform-origin: left;
+  will-change: transform;
 }
