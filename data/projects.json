@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "title": "Task Management System",
+    "description": "A comprehensive role-based task management system with status tracking and categories, built during internship at Ciarpro Tech.",
+    "image": "/images/img-1.jpg",
+    "tags": ["HTML", "CSS", "JavaScript", "PHP", "MySQL"],
+    "liveUrl": "#",
+    "githubUrl": "#"
+  },
+  {
+    "id": 2,
+    "title": "Population Trend Prediction",
+    "description": "A machine learning model for predicting population trends involving data preprocessing and forecasting, built during internship at Infosys.",
+    "image": "/images/img-2.png",
+    "tags": ["Python", "Machine Learning", "Data Analysis"],
+    "liveUrl": "#",
+    "githubUrl": "#"
+  }
+]
