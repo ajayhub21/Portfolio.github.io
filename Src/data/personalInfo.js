@@ -14,9 +14,9 @@ export const personalInfo = {
   district: 'Chennai',
   state: 'Tamil Nadu',
   country: 'India (Open to Relocation)',
-  profileImage: '/images/ajay2.png',
-  aboutImage: '/images/ajay.png',
-  resumeUrl: '/assets/AjayCV.docx',
+  profileImage: import.meta.env.BASE_URL + 'images/ajay2.png',
+  aboutImage: import.meta.env.BASE_URL + 'images/ajay.png',
+  resumeUrl: import.meta.env.BASE_URL + 'assets/AjayCV.docx',
 
   // Bio text from the original site
   heroBio:

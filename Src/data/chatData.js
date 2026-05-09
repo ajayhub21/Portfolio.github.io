@@ -4,7 +4,7 @@
 export const assistantProfile = {
   name: 'Tessa',
   role: 'Personal AI Assistant',
-  avatar: '/images/tessa-avatar.png',
+  avatar: import.meta.env.BASE_URL + 'images/tessa-avatar.png',
   greeting: "Hi there! 👋 I'm Tessa, Ajay's personal AI assistant. How can I help you today?",
 }
 

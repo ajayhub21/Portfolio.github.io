@@ -3,7 +3,7 @@
 export const galleryPhotos = [
   {
     id: 1,
-    src: '/images/ajay.png',
+    src: import.meta.env.BASE_URL + 'images/ajay.png',
     alt: 'Profile photo',
     caption: 'Living my best life 💫',
     likes: 124,
@@ -11,7 +11,7 @@ export const galleryPhotos = [
   },
   {
     id: 2,
-    src: '/images/ajay2.png',
+    src: import.meta.env.BASE_URL + 'images/ajay2.png',
     alt: 'Developer at work',
     caption: 'Code. Create. Repeat. 💻',
     likes: 89,
@@ -19,7 +19,7 @@ export const galleryPhotos = [
   },
   {
     id: 3,
-    src: '/images/about-img.jpg',
+    src: import.meta.env.BASE_URL + 'images/about-img.jpg',
     alt: 'About me',
     caption: 'Behind the scenes 🎬',
     likes: 156,
@@ -27,7 +27,7 @@ export const galleryPhotos = [
   },
   {
     id: 4,
-    src: '/images/img-1.jpg',
+    src: import.meta.env.BASE_URL + 'images/img-1.jpg',
     alt: 'Project showcase',
     caption: 'New project dropped! 🚀',
     likes: 203,
@@ -35,7 +35,7 @@ export const galleryPhotos = [
   },
   {
     id: 5,
-    src: '/images/img-2.png',
+    src: import.meta.env.BASE_URL + 'images/img-2.png',
     alt: 'E-commerce dashboard',
     caption: 'Building something amazing ✨',
     likes: 178,
@@ -43,7 +43,7 @@ export const galleryPhotos = [
   },
   {
     id: 6,
-    src: '/images/img-3.png',
+    src: import.meta.env.BASE_URL + 'images/img-3.png',
     alt: 'Java application',
     caption: 'Java vibes ☕',
     likes: 142,
@@ -51,7 +51,7 @@ export const galleryPhotos = [
   },
   {
     id: 7,
-    src: '/images/img-4.png',
+    src: import.meta.env.BASE_URL + 'images/img-4.png',
     alt: 'Product management tool',
     caption: 'Managing products like a pro 📊',
     likes: 95,
@@ -59,7 +59,7 @@ export const galleryPhotos = [
   },
   {
     id: 8,
-    src: '/images/img-5.png',
+    src: import.meta.env.BASE_URL + 'images/img-5.png',
     alt: 'Responsive web app',
     caption: 'Responsive design matters 📱',
     likes: 167,
@@ -67,7 +67,7 @@ export const galleryPhotos = [
   },
   {
     id: 9,
-    src: '/images/img-6.png',
+    src: import.meta.env.BASE_URL + 'images/img-6.png',
     alt: 'Database system',
     caption: 'Data is the new oil 🛢️',
     likes: 113,
@@ -75,7 +75,7 @@ export const galleryPhotos = [
   },
   {
     id: 10,
-    src: '/images/home-img.png',
+    src: import.meta.env.BASE_URL + 'images/home-img.png',
     alt: 'Home setup',
     caption: 'My workspace setup 🖥️',
     likes: 231,
@@ -83,7 +83,7 @@ export const galleryPhotos = [
   },
   {
     id: 11,
-    src: '/images/baby.jpg',
+    src: import.meta.env.BASE_URL + 'images/baby.jpg',
     alt: 'Memories',
     caption: 'Precious moments ❤️',
     likes: 312,
@@ -91,7 +91,7 @@ export const galleryPhotos = [
   },
   {
     id: 12,
-    src: '/images/ajay.png',
+    src: import.meta.env.BASE_URL + 'images/ajay.png',
     alt: 'Another day',
     caption: 'Stay hungry, stay foolish 🌟',
     likes: 198,
@@ -104,7 +104,7 @@ export const instagramProfile = {
   username: 'ajay.__.aj',
   fullName: 'Ajay R',
   bio: 'Developer | Creator | Dreamer\n💻 Full Stack Dev\n📍 Nagapattinam, India',
-  profilePic: '/images/ajay2.png',
+  profilePic: import.meta.env.BASE_URL + 'images/ajay2.png',
   posts: 12,
   followers: '1.2K',
   following: 456,

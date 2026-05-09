@@ -1,4 +1,4 @@
-import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaWhatsapp } from 'react-icons/fa'
+import { FaEnvelope, FaMobileAlt, FaMapMarkerAlt, FaWhatsapp } from 'react-icons/fa'
 import { personalInfo } from '../../data/personalInfo'
 import SectionHeading from '../ui/SectionHeading'
 import ScrollReveal from '../ui/ScrollReveal'
@@ -6,8 +6,8 @@ import styles from './Contact.module.css'
 
 const contactInfo = [
   { icon: FaEnvelope, label: 'Email', value: personalInfo.email, href: `mailto:${personalInfo.email}`, subLabel: 'Drop a mail' },
-  { icon: FaPhone, label: 'Phone', value: personalInfo.phone, href: `tel:${personalInfo.phone}`, subLabel: 'Call or Save' },
-  { icon: FaWhatsapp, label: 'WhatsApp', value: 'Message Me', href: `https://wa.me/91${personalInfo.phone}`, subLabel: 'Chat directly' },
+  { icon: FaMobileAlt, label: 'Phone', value: personalInfo.phone, href: `tel:${personalInfo.phone.replace(/[^0-9+]/g, '')}`, subLabel: 'Call or Save' },
+  { icon: FaWhatsapp, label: 'WhatsApp', value: 'Message Me', href: `https://wa.me/${personalInfo.phone.replace(/[^0-9]/g, '')}`, subLabel: 'Chat directly' },
   { icon: FaMapMarkerAlt, label: 'Location', value: `${personalInfo.district}, ${personalInfo.state}`, href: null, subLabel: 'My location' },
 ]
 
